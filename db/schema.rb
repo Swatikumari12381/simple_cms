@@ -16,17 +16,18 @@ ActiveRecord::Schema.define(version: 2019_07_24_084006) do
   enable_extension "plpgsql"
 
   create_table "pages", force: :cascade do |t|
-    t.integer "subject_id"
     t.string "name"
     t.string "permalink"
     t.string "position"
     t.boolean "visible"
+    t.bigint "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["subject_id"], name: "index_pages_on_subject_id"
   end
 
   create_table "sections", force: :cascade do |t|
-    t.integer "page_id"
+    t.bigint "page_id"
     t.string "name"
     t.integer "position"
     t.boolean "visible"
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_07_24_084006) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["page_id"], name: "index_sections_on_page_id"
   end
 
   create_table "subjects", force: :cascade do |t|
