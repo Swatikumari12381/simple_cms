@@ -5,6 +5,7 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.string "contact_no"
       t.string "address"
       t.date "dob"
+      profile belongs_to :author
       t.timestamps
     end
   end
