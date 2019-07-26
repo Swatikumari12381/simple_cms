@@ -4,7 +4,7 @@ class CreateAuthors < ActiveRecord::Migration[5.2]
       t.string "email"
       t.string "first_name"
       t.string "last_name"
-      has_one :profile
+      
       t.timestamps
     end
   end
