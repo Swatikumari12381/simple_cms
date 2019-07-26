@@ -1,3 +1,3 @@
 class Profile < ApplicationRecord
-  belons_to :author
+  belongs_to :author
 end
