@@ -1,0 +1,16 @@
+<h1> hello world</h1>
+
+<table style="width:50%">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+  </tr>
+<% @subject.pages.each do |o| %>
+
+<tr>
+  <td><%= o.id  %></td>
+  <td><%= o.name  %></td>
+</tr>
+
+<% end %>
+</table>

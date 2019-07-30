@@ -1,2 +1,31 @@
-<h1>All subjects</h1>
-<%= link_to('home page', {controller:'home',action: 'index'}) %>
+<h1>All subjects  <%= link_to('pages', {controller:'pages',action: 'index'}) %></h1>
+
+<h1><%= link_to('section', {controller:'sections',action: 'index'}) %></h1>
+
+
+
+<%= link_to ' Add new subject', new_subject_path %>
+<table style="width:50%">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>position</th>
+    <th>visible</th>
+    <th>Action</th>
+
+  </tr>
+<% @subjects.each do |o| %>
+<tr>
+  <td><%= o.id  %></td>
+  <td><%= o.name  %></td>
+  <td><%= o.position  %></td>
+  <td><%= o.visible  %></td>
+  <td>
+    <%= link_to 'show', subject_path(o) %>
+    <%= link_to 'edit', edit_subject_path(o) %>
+    <%= link_to 'delete', subject_path(o), method: :delete %>
+  </td>
+</tr>
+<% end %>
+
+</table>

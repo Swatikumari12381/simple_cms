@@ -1,0 +1,15 @@
+<h3>all pages</h3>
+<table style="width:50%">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+  </tr>
+<% @page.sections.each do |o| %>
+
+<tr>
+  <td><%= o.id  %></td>
+  <td><%= o.name  %></td>
+</tr>
+
+<% end %>
+</table>
