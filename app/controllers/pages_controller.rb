@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   def index
     @page= Page.where("visible='true'")
     @page= Page.order(:position)
-
   end
 
   def create
@@ -12,7 +11,7 @@ class PagesController < ApplicationController
     else
       render 'new'
   end
-end
+  end
 
   def edit
   @page= Page.find(params[:id])
@@ -20,7 +19,6 @@ end
 
   def update
     @page= Page.find(params[:id])
-
     if @page.update_attributes(page_params)
       redirect_to pages_path
     else
@@ -40,8 +38,7 @@ end
     @page= Page.find(params[:id])
     if @page.destroy
       redirect_to pages_path
-
-    end
+  end
   end
 
   protected

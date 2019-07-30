@@ -2,7 +2,6 @@ class SubjectsController < ApplicationController
   def index
     @subjects= Subject.where("visible='true'")
     @subjects= Subject.order(:position)
-
   end
 
   def create
@@ -12,7 +11,7 @@ class SubjectsController < ApplicationController
     else
       render 'new'
   end
-end
+  end
 
   def edit
   @subject= Subject.find(params[:id])
@@ -20,7 +19,6 @@ end
 
   def update
     @subject= Subject.find(params[:id])
-
     if @subject.update_attributes(subject_params)
       redirect_to subjects_path
     else
@@ -40,9 +38,8 @@ end
     @subject= Subject.find(params[:id])
     if @subject.destroy
       redirect_to subjects_path
-
     end
-  end
+    end
 
   protected
 

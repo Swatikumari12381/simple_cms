@@ -2,7 +2,6 @@ class SectionsController < ApplicationController
   def index
     @section= Section.where("visible='true'")
     @section= Section.order(:position)
-
   end
 
   def create
@@ -11,8 +10,8 @@ class SectionsController < ApplicationController
       redirect_to sections_path
     else
       render 'new'
-  end
-end
+    end
+    end
 
   def edit
   @section= Section.find(params[:id])
@@ -20,7 +19,6 @@ end
 
   def update
     @section= Section.find(params[:id])
-
     if @section.update_attributes(section_params)
       redirect_to sections_path
     else
@@ -40,9 +38,8 @@ end
     @section= Section.find(params[:id])
     if @section.destroy
       redirect_to sections_path
-
     end
-  end
+    end
 
   protected
 
