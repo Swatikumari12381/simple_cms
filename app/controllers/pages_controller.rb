@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   def index
     @page= Page.where("visible='true'")
     @page= Page.order(:position)

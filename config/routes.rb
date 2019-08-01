@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-
+  
+  get 'public/index'
+  devise_for :admin_users
   get 'sections/index'
   get 'pages/index'
   get 'authors/index'

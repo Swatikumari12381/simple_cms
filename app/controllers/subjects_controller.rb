@@ -1,4 +1,5 @@
 class SubjectsController < ApplicationController
+
   def index
     @subjects= Subject.where("visible='true'")
     @subjects= Subject.order(:position)

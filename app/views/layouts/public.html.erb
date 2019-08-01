@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SimpleCms</title>
+    <title>public layout</title>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,7 +13,7 @@
   <body>
     <h1>simple CMS Bluprint</h1>
     <%= yield %>
-      <%= link_to('logout', destroy_admin_user_session_path, method: :delete) %>
+
 
 
     <p class="notice"><%= notice %></p>
