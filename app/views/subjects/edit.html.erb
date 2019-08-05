@@ -7,6 +7,7 @@
 <% end %>
 </ul>
 <% end %>
+<div class="row">
 <div class=""form_group">
   <%= f.label :name %>
   <br>
@@ -16,7 +17,7 @@
 <div class=""form_group">
   <%= f.label :position %>
   <br>
-  <%= f.tex_field :position,  class: 'from-control' %>
+  <%= f.text_field :position,  class: 'from-control' %>
 </div>
 <div class=""form_group form-check">
   <%= f.check_box :visible,  class: 'from-control' %>
@@ -25,4 +26,5 @@
 </div>
 <br>
 <%= f.submit "save", class: 'btn btn-primary' %>
+</div>
 <% end %>

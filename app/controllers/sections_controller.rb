@@ -1,5 +1,5 @@
 class SectionsController < ApplicationController
-  
+
   def index
     @section= Section.where("visible='true'")
     @section= Section.order(:position)

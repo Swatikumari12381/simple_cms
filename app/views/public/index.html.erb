@@ -1,7 +1,62 @@
-<h1>Public#index</h1>
-<p>Find me in app/views/public/index.html.erb</p>
 
-<table style="width:50%">
+    <nav class="navbar navbar-expand-lg bg-success navbar-dark">
+    <div class="container" >
+      <!-- <a class="navbar-band" href="#">Simple CMS</a> -->
+
+      <ul class="nav navbar-nav">
+
+            <% @subjects.each do |o| %>
+            <li>
+            <%= link_to  o.name, public_path(o), class: "abcd"%>
+
+          </li>
+          <% end %>
+        </ul>
+
+  </div>
+    </nav>
+
+
+<center><h2> Welcome to CMS</h2></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h3>Welcome to simple CMS</h3>
+
+</div> -->
+
+<!-- <table style="width:50%">
   <tr>
     <th>id</th>
     <th>name</th>
@@ -20,4 +75,4 @@
 </tr>
 <% end %>
 
-</table>
+</table> -->

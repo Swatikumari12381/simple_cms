@@ -3,6 +3,12 @@ class PublicController < ApplicationController
   layout "public"
   def index
     @subjects= Subject.all
-    @subjects= Subject.order(:position)
+
   end
-end
+  def show
+    @subjects= Subject.all
+    @sub = Subject.find(params[:id])
+
+
+  end
+  end

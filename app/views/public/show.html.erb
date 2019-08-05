@@ -1,0 +1,6 @@
+<h3>all pages</h3>
+
+
+<% @sub.pages.each do |o| %>
+<%= link_to o.name, display_path(o) %>
+<% end %>
